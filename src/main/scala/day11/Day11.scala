@@ -9,16 +9,16 @@ object Day11 {
     var current = (0, 0)
     var max = 0
 
-    for (a <- input.split(',')) {
-      a match {
-        case "n" => current = (current._1, current._2 + 2)
-        case "s" => current = (current._1, current._2 - 2)
-        case "ne" => current = (current._1 + 1, current._2 + 1)
-        case "se" => current = (current._1 + 1, current._2 - 1)
-        case "sw" => current = (current._1 - 1, current._2 - 1)
-        case "nw" => current = (current._1 - 1, current._2 + 1)
-      }
-      max = Math.max(dist(current), max)
+    input.split(',').foreach {
+
+      case "n" => current = (current._1, current._2 + 2)
+      case "s" => current = (current._1, current._2 - 2)
+      case "ne" => current = (current._1 + 1, current._2 + 1)
+      case "se" => current = (current._1 + 1, current._2 - 1)
+      case "sw" => current = (current._1 - 1, current._2 - 1)
+      case "nw" => current = (current._1 - 1, current._2 + 1)
+
+        max = Math.max(dist(current), max)
     }
 
     println("part 1: " + dist(current))
