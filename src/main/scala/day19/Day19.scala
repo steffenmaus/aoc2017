@@ -4,7 +4,6 @@ import scala.collection.mutable.ListBuffer
 
 object Day19 {
   lazy val fileInput: Array[String] = io.Source.fromInputStream(getClass.getResourceAsStream("input.txt")).mkString.filter(_ != '\r').split("\n")
-  lazy val testInput: Array[String] = io.Source.fromInputStream(getClass.getResourceAsStream("testInput.txt")).mkString.filter(_ != '\r').split("\n")
 
   def main(args: Array[String]): Unit = {
     val input = fileInput
