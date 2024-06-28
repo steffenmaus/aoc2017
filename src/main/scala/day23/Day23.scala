@@ -80,8 +80,7 @@ object Day23 {
       var f = 1
       var d = 2
       while (g != 0) {
-        val maxE = b
-        if (b % d == 0 && d * maxE > b) {
+        if (b % d == 0) {
           f = 0
         }
         d = d + 1
